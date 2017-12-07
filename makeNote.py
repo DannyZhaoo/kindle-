@@ -25,7 +25,7 @@ def parseNotes(dict = None):
         else:
             noteDict[title] = [time_date + ' ' + selected_time + '\n' + '> ' + dict[3+(time-1)*5] +'\n']
     for key in noteDict:
-        with open(key+'.md', 'w', encoding='utf-8') as note:
+        with open(key+'.md', 'a', encoding='utf-8') as note:
             for value in noteDict[key]:
                 note.write(value)
 
